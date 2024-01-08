@@ -2,6 +2,7 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 
+
 class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
@@ -34,9 +35,10 @@ class Comment(models.Model):
     ]
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments',)
-    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments', )
-    body = models.TextField()
-    stars = models.CharField(max_length=10, choices=PRODUCT_STARS)
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments',
+                               verbose_name="Comment Author")
+    body = models.TextField(verbose_name="Comment Text")
+    stars = models.CharField(max_length=10, choices=PRODUCT_STARS, verbose_name="What is Your Score?")
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
