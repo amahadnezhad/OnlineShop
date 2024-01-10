@@ -1,11 +1,32 @@
-Requirement already satisfied: django-rosetta in /usr/local/lib/python3.9/site-packages (0.10.0)
-Requirement already satisfied: Django>=4.2 in /usr/local/lib/python3.9/site-packages (from django-rosetta) (4.2.7)
-Requirement already satisfied: polib>=1.1.0 in /usr/local/lib/python3.9/site-packages (from django-rosetta) (1.2.0)
-Requirement already satisfied: requests>=2.30.0 in /usr/local/lib/python3.9/site-packages (from django-rosetta) (2.31.0)
-Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.9/site-packages (from Django>=4.2->django-rosetta) (0.4.4)
-Requirement already satisfied: asgiref<4,>=3.6.0 in /usr/local/lib/python3.9/site-packages (from Django>=4.2->django-rosetta) (3.7.2)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.9/site-packages (from requests>=2.30.0->django-rosetta) (2.1.0)
-Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.9/site-packages (from requests>=2.30.0->django-rosetta) (2023.7.22)
-Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.9/site-packages (from requests>=2.30.0->django-rosetta) (3.4)
-Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.9/site-packages (from requests>=2.30.0->django-rosetta) (3.3.2)
-Requirement already satisfied: typing-extensions>=4 in /usr/local/lib/python3.9/site-packages (from asgiref<4,>=3.6.0->Django>=4.2->django-rosetta) (4.8.0)
+asgiref==3.7.2
+certifi==2023.7.22
+cffi==1.16.0
+charset-normalizer==3.3.2
+crispy-bootstrap4==2023.1
+cryptography==41.0.5
+defusedxml==0.7.1
+dj-database-url==2.1.0
+dj-email-url==1.0.6
+Django==4.2.7
+django-allauth==0.58.2
+django-cache-url==3.4.5
+django-crispy-forms==2.1
+django-rosetta==0.10.0
+environs==10.0.0
+idna==3.4
+marshmallow==3.20.1
+oauthlib==3.2.2
+packaging==23.2
+polib==1.2.0
+psycopg2-binary==2.9.9
+pycparser==2.21
+PyJWT==2.8.0
+python-decouple==3.8
+python-dotenv==1.0.0
+python3-openid==3.2.0
+requests==2.31.0
+requests-oauthlib==1.3.1
+sqlparse==0.4.4
+typing_extensions==4.8.0
+tzdata==2023.3
+urllib3==2.1.0
