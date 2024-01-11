@@ -28,6 +28,15 @@ class Cart:
 
         self.save()
 
+    def remove(self, product):
+        """
+        Remove a Product From The Cart
+        """
+        product_id = str(product.id)
+        if product_id in self.cart:
+            del self.cart[product_id]
+            self.save()
+
     def save(self):
         """
         Mark Session As Modified To Save Changes
