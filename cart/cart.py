@@ -26,7 +26,7 @@ class Cart:
             self.cart[product_id] = {'quantity': quantity}
 
         else:
-            self.cart[product_id][quantity] += quantity
+            self.cart[product_id]['quantity'] += quantity
 
         self.save()
 
@@ -52,7 +52,7 @@ class Cart:
         cart = self.cart.copy()
 
         for product in products:
-            cart[str(product.id)]['product-obj'] = product
+            cart[str(product.id)]['product_obj'] = product
 
         for item in cart.values():
             yield item
