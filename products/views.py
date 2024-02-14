@@ -38,8 +38,8 @@ class CommentCreateView(generic.CreateView):
     model = Comment
     form_class = CommentForm
 
-    # def get_success_url(self):
-    #     return reverse('product_list')
+    def get_success_url(self):
+        return reverse('product_list')
 
     def form_valid(self, form):
         obj = form.save(commit=False)
@@ -48,5 +48,7 @@ class CommentCreateView(generic.CreateView):
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, id=product_id)
         obj.product = product
+
+        messages.success(self.request, _("Comment Successfully Created!"))
 
         return super().form_valid(form)
