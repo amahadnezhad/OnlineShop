@@ -92,7 +92,7 @@
                         <li class="header-toolbar__item mini-cart-item">
                             <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                 <i class="flaticon flaticon-shopping-cart"></i>
-                                <sup class="mini-cart-count">2</sup>
+                                <sup class="mini-cart-count">{{ cart|length }}</sup>
                             </a>
                         </li>
                         <li class="header-toolbar__item user-info">
@@ -143,11 +143,7 @@
         {% endfor %}
 
     </div>
-{#<ul class="messages">#}
-{#    {% for message in messages %}#}
-{#        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
-{#    {% endfor %}#}
-{#</ul>#}
+
 {% endif %}
 
 {% block content %}
