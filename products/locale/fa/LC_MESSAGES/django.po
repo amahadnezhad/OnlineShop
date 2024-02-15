@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 01:34+0330\n"
+"POT-Creation-Date: 2024-02-15 16:58+0330\n"
 "PO-Revision-Date: 2024-02-15 01:34+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,9 +69,19 @@ msgstr "اضافه به سبد خرید"
 msgid "Write Your Comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:176
+#: .\templates\products\product_detail.html:178
 msgid "Submit"
 msgstr "ارسال"
+
+#: .\templates\products\product_detail.html:181
+#, fuzzy
+#| msgid "Write Your Comment"
+msgid "To Write Your Comment Please Login!"
+msgstr "نظر خود را بنویسید"
+
+#: .\templates\products\product_detail.html:182
+msgid "login"
+msgstr ""
 
 #: .\views.py:13
 msgid "Hello"
