@@ -25,13 +25,13 @@
                         <div class="checkout-form">
                             <form action="" method="POST" class="form form--checkout">
                                 {% csrf_token %}
-                                
+
                                 {% if form.errors %}
                                     <div class="alert alert-danger">
                                         {{ form.errors }}
                                     </div>
-                                {% endif %} 
-                                
+                                {% endif %}
+
                                 <div class="form-row mb--20">
                                     <div class="form__group col-md-6 mb-sm--30">
                                         <label for="billing_fname" class="form__label form__label--2">نام <span
@@ -91,7 +91,8 @@
                                     {% for item in cart %}
                                         <tr>
                                             <th>{{ item.product_obj.title }}
-                                                <strong><span>&#10005;</span>{{ item.quantity|translate_number }}</strong>
+                                                <strong><span>&#10005;</span>{{ item.quantity|translate_number }}
+                                                </strong>
                                             </th>
                                             <td class="text-right">{{ item.product_obj.price|intcomma:False|translate_number }} {% translate 'Toman' %}</td>
                                         </tr>
@@ -124,6 +125,9 @@
             </div>
         </div>
     </div>
+    <!-- Mini Cart Start -->
+    {% include 'cart/cart_sidebar.html' %}
+    <!-- Mini Cart End -->
     <!-- Main Content Wrapper End -->
 
 {% endblock content %}
