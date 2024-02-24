@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext as _
 
 from .models import Order, OrderItem
 
@@ -10,11 +11,11 @@ class OrderForm(forms.ModelForm):
         widgets = {
             'order_notes': forms.Textarea(attrs={
                 'rows': 5,
-                'placeholder': 'If You Have Any Words Please Enter Here!',
+                'placeholder': _('If You Have Any Words Please Enter Here!'),
             }),
             'address': forms.Textarea(attrs={
                 'rows': 3,
-                'placeholder': 'Enter Your Address Here!',
+                'placeholder': _('Enter Your Address Here!'),
 
             }),
         }
