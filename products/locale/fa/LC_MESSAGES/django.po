@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-18 19:11+0330\n"
-"PO-Revision-Date: 2024-02-18 19:11+0330\n"
-"Last-Translator:   <amir@amir.com>\n"
+"PO-Revision-Date: 2024-02-24 23:16+0330\n"
+"Last-Translator: جلیل محمدی <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,6 @@ msgid "Toman"
 msgstr "تومان"
 
 #: .\templates\products\product_detail.html:56
-#, fuzzy
 #| msgid "Add To Cart"
 msgid "Add to Cart"
 msgstr "اضافه به سبد خرید"
@@ -78,10 +77,9 @@ msgid "Submit"
 msgstr "ارسال"
 
 #: .\templates\products\product_detail.html:175
-#, fuzzy
 #| msgid "Write Your Comment"
 msgid "To Write Your Comment Please Login!"
-msgstr "نظر خود را بنویسید"
+msgstr "برای ایجاد نظر لطفا وارد محیط کاربری شوید"
 
 #: .\templates\products\product_detail.html:176
 msgid "login"

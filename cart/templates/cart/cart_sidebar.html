@@ -9,6 +9,7 @@
 <aside class="mini-cart" id="miniCart">
     <div class="mini-cart-wrapper">
         <a href="" class="btn-close"></a>
+        <br>
         <div class="mini-cart-inner">
             <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">{% trans 'Cart' %}</h3>
             <div class="mini-cart__content">
@@ -40,9 +41,12 @@
                     <span class="ammount">{{ cart.get_total_price|intcomma:False|translate_number }} {% trans 'Toman' %}</span>
                 </div>
                 <div class="mini-cart__buttons">
-                    <a href="{% url 'cart:cart_detail' %}"
+                    <a href="{% url 'product_list' %}"
                        class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'Go To Cart' %}</a>
-                    <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans 'Checkout' %}</a>
+                    {% if not cart.is_empty %}
+                        <a href="{% url "order_create" %}" class="btn btn-fullwidth btn-bg-sand">{% trans 'Checkout' %}</a>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
